@@ -1,0 +1,196 @@
+/* Demonstrates CSS styling [cite: 13] */
+
+/* --- GENERAL STYLES --- */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+    min-height: 70vh;
+}
+
+/* --- NAVIGATION BAR STYLES --- */
+.navbar {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 10px 0;
+    overflow: auto;
+    display: flex; /* Using Flexbox for navigation layout [cite: 15] */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li .active {
+    background: var(--primary-color);
+}
+
+/* --- HOME PAGE (Float Demonstration) --- */
+/* Demonstrates Float for layout [cite: 14] */
+.hero-section {
+    padding: 40px 0;
+    overflow: hidden; /* Clearfix for floats */
+}
+
+.float-left {
+    float: left;
+    width: 60%;
+    padding-right: 20px;
+}
+
+.float-right {
+    float: right;
+    width: 40%;
+}
+
+.clear {
+    clear: both; /* Standard clearfix element */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+
+/* --- ABOUT ME PAGE --- */
+.profile-info {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    align-items: flex-start;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+}
+
+
+/* --- SKILLS PAGE (Flexbox Demonstration) --- */
+.skills-grid {
+    display: flex; /* Flexbox for layout [cite: 15, 38] */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.skill-card {
+    flex: 1 1 300px; /* Allows flexibility and defines minimum width */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Border [cite: 37] */
+    border: 1px solid #ddd; 
+    /* Background color [cite: 37] */
+    background-color: #fff; 
+}
+
+/* Specific background colors for demonstration [cite: 37] */
+.html-card { background-color: #ecf0f1; border-color: #3498db; }
+.js-card { background-color: #f7f9f9; border-color: #f1c40f; }
+.design-card { background-color: #f0f8f0; border-color: #2ecc71; }
+
+
+/* --- CONTACT FORM PAGE --- */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* --- FOOTER STYLES --- */
+footer {
+    background: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+}
